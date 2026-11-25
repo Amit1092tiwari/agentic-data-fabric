@@ -1,4 +1,4 @@
-﻿# 🤖 Enterprise Agentic Data Fabric & Autonomous MCP Governor
+# 🤖 Enterprise Agentic Data Fabric & Autonomous MCP Governor
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Model Context Protocol](https://img.shields.io/badge/MCP-2024--11--05-8A2BE2.svg)](https://modelcontextprotocol.io/)
@@ -14,7 +14,7 @@ A production-grade **Deterministic Data Fabric** enabling autonomous AI agents (
 
 ```mermaid
 flowchart TD
-    Client["🤖 AI Client (Claude Desktop / Gemini CLI / Antigravity)"] <-->|Model Context Protocol (Stdio)| MCPServer["🔌 MCP Server (src/mcp_server)"]
+    Client["🤖 AI Client (Claude Desktop / Gemini CLI / Antigravity)"] <-->|"Model Context Protocol (Stdio)"| MCPServer["🔌 MCP Server (src/mcp_server)"]
     
     subgraph GuardrailLayer ["Deterministic Guardrails & Query Sandbox"]
         MCPServer <--> Router["Gateway Router"]
@@ -30,7 +30,7 @@ flowchart TD
         Watcher["📊 LakehouseHealthWatcher (Detects Small-File Sprawl)"]
         Lakehouse -.-> Watcher
         Watcher --> Compactor["⚙️ AutonomousCompactor (Bin-Packing with Checksums)"]
-        Compactor -->|Commit Verified Snapshot| Lakehouse
+        Compactor -->|"Commit Verified Snapshot"| Lakehouse
     end
 ```
 
